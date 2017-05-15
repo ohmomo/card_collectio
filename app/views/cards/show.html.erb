@@ -1,47 +1,51 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= Card.human_attribute_name :name %>:</strong>
   <%= @card.name %>
 </p>
 
 <p>
-  <strong>Rate:</strong>
+  <strong><%= Card.human_attribute_name :rate %>:</strong>
   <%= @card.rate %>
 </p>
 
 <p>
-  <strong>Group:</strong>
+  <strong><%= Card.human_attribute_name :group %>:</strong>
   <%= @card.group %>
 </p>
 
 <p>
-  <strong>Attack:</strong>
+  <strong><%= Card.human_attribute_name :attack %>:</strong>
   <%= @card.attack %>
 </p>
 
 <p>
-  <strong>Intellect:</strong>
+  <strong><%= Card.human_attribute_name :intellect %>:</strong>
   <%= @card.intellect %>
 </p>
 
 <p>
-  <strong>Suppression:</strong>
+  <strong><%= Card.human_attribute_name :suppression %>:</strong>
   <%= @card.suppression %>
 </p>
 
 <p>
-  <strong>Comment:</strong>
+  <strong><%= Card.human_attribute_name :comment %>:</strong>
   <%= @card.comment %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @card.image %>
+  <strong><%= Card.human_attribute_name :image %>:</strong>
+  <% if @card.image? %>
+    <div class="thumbnail">
+      <%= image_tag @card.image.url %>
+    </div>
+  <% end %>
 </p>
 
 <p>
-  <strong>Cost:</strong>
+  <strong><%= Card.human_attribute_name :cost %>:</strong>
   <%= @card.cost %>
 </p>
 

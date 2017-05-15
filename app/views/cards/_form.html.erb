@@ -54,9 +54,24 @@
   </div>
 
   <div class="field">
+    <% if card.image? %>
+      <div class="thumbnail">
+        <%= image_tag card.image.url %>
+      </div>
+    <% end %>
     <%= f.label :image %>
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
     <%= error_messages_on(f.object, :image)%>
+  </div>
+  <div class="field">
+    <!-- 既存レコード(DBに保存されている)かつ、画像が存在する場合 -->
+    <% if card.persisted? && card.image? %>
+        <label>
+          <%= f.check_box :remove_image %>
+          画像を削除
+        </label>
+    <% end %>
   </div>
 
   <div class="field">
