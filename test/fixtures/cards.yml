@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rate: 1
+  group: 1
+  attack: 1
+  intellect: 1
+  suppression: 1
+  comment: MyString
+  image: MyString
+  cost: 1
+
+two:
+  name: MyString
+  rate: 1
+  group: 1
+  attack: 1
+  intellect: 1
+  suppression: 1
+  comment: MyString
+  image: MyString
+  cost: 1
