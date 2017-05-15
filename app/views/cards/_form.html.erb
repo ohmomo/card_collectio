@@ -1,0 +1,71 @@
+<%= form_for(card) do |f| %>
+  <% if card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= error_messages_on(f.object, :name)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :rate %>
+    <%= f.number_field :rate %>
+    <%= error_messages_on(f.object, :rate)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :group %>
+    <%= f.number_field :group %>
+    <%= error_messages_on(f.object, :group)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :attack %>
+    <%= f.number_field :attack %>
+    <%= error_messages_on(f.object, :attack)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :intellect %>
+    <%= f.number_field :intellect %>
+    <%= error_messages_on(f.object, :intellect)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :suppression %>
+    <%= f.number_field :suppression %>
+    <%= error_messages_on(f.object, :suppression)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+    <%= error_messages_on(f.object, :comment)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+    <%= error_messages_on(f.object, :image)%>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost %>
+    <%= f.number_field :cost %>
+    <%= error_messages_on(f.object, :cost)%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
